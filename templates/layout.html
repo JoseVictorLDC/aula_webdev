@@ -1,0 +1,20 @@
+<!doctype html>
+<head>
+    <title>MEU BLOG CARA</title>
+    <img "">
+    <link rel="stylesheet" type="text/css" href="static/estilo.css">
+</head>
+
+<body class="pagina">
+        <h1>BLOG do ZÉZÉ</h1>
+    <div class="metanav">
+        {% if not session.logado %}
+            <a href="">login</a>
+        {% else %}
+            <a href="">logout</a>
+        {% endif %}
+    </div>
+        {% block corpo %}
+        {% endblock %}
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!--
+<h1>FALA FAMILIAAA </h1> 
+<p>e boa tarde <p>
+
+{% for entrada in posts %}
+<h1>{{ entrada['titulo'] }}</h1>
+<p>{{ entrada['texto'] }}</p>
+{% endfor %}
+-->
+
+{% extends "layout.html" %}
+{% block corpo %}
+    <ul class="entradas">
+        {% for entrada in posts %}
+            <li><h2>{{ entrada.titulo }}</h2>
+            {{ entrada.texto|safe }}
+        {% else %}
+            <li><em>Inacreditável. Até agora nenhuma entrada... ta vacilando hein irmao.</em>
+        {% endfor %}
+    </ul>
+{% endblock %}
